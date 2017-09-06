@@ -1,0 +1,138 @@
+/*页面通用样式*/
+body{
+    font-family: "Myriad Pro", Arial, "FZLanTingHei-R-GBK", 方正兰亭黑,
+    "Microsoft YaHei", 微软雅黑, STHeiti, 华文黑体, SimSun, 宋体, sans-serif;
+    font-size:14px;
+    color:#393939;
+    margin:0 auto;
+    width:100%;
+    background-color:#F6F6F6;
+}
+p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.lf{float:left;}
+.rt{float:right;}
+.clear:after{
+    content:"";
+    display:block;
+    clear:both;}
+a{
+    color:#00925F;
+    text-decoration:none;
+
+}
+a:hover{
+    color:#868686;
+}
+input{text-decoration:none;
+    border: 1px solid #e2e2e2;
+    outline: 0;
+}
+/*布局样式*/
+
+#top,#top_box,#top_main,#banner,#main,#foot_box,#footer,#banner_bottom{
+    width:100%;
+    margin:0 auto;
+    box-sizing:border-box;
+}
+#top{
+    background-color:#2AAD6F;
+    height:34px;
+    margin-bottom:110px;
+}
+#top>div{
+    margin:0 231px;
+}
+#top li{
+    float:left;
+    width:108px;
+    border-left:1px solid #57B488;
+    text-align:center;
+}
+#top li:hover{
+    background-color:#47B488;
+}
+#top a{
+    color:#fff;
+    line-height:34px;
+    font-size:15px;}
+footer>p{
+    width:100%;
+    text-align:center;
+    line-height:16px;
+    font-size:16px;
+    color:#7B7B7B;
+
+}
+#main{
+width:960px;
+    height:688px;
+}
+#main>div{
+    width:958px;
+    height:111px;
+    border:1px solid #ddd;
+    text-align:center;
+    line-height:111px;
+    font-size:22px;
+}
+form{
+    width:958px;
+    height:350px;
+    padding:90px 0;
+    border:1px solid #ddd;
+    border-top:none;
+    /*box-sizing:border-box;*/
+}
+#main form>div{
+    width:320px;
+    margin:15px auto 0;
+    height:46px;
+
+}
+form input{
+    padding:0 12px;
+    height:46px;
+
+    box-sizing:border-box;
+}
+.area_input .username,.area_input .password,.area_input .repassword{
+    width:320px;
+}
+/*.area_input .code{*/
+/*    width:155px;*/
+/*}*/
+/*.area_input div{*/
+/**/
+/*    width:153px;*/
+/*}*/
+form>div:nth-child(2) *{
+    float:left;
+}
+.submit{width:320px;
+background:#47B488;
+color:#fff;
+font-size:18px;}
+.area_input{
+    height:46px;
+}
+
+/*.area_input img{width:153px;}*/
+/*.code{*/
+/*    width:155px;*/
+/*    margin-right:10px;*/
+/*}*/
+.protocol{
+    margin-bottom:25px;
+}
+.btSubmit{
+width:320px;
+background:#2AAD6F;
+color:#fff;
+font-size:16px;
+}
+
+

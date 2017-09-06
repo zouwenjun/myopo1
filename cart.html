@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <link rel="stylesheet" href="css/iframe.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/cart.css"/>
+</head>
+<body>
+<!--1、页面顶部-->
+<header id="top" class="clear">
+    <ul class="rt index_menu">
+        <li><a href="login.html" id="duname">登陆</a></li>
+        <li><a href="#" id="out">注册</a></li>
+        <li><a href="#">Global</a></li>
+
+    </ul>
+</header>
+<div id="top_box">
+    <p><img href="index.html" src="images/mini/logo.png">
+    </p>
+    <ul class="rt" class="clear">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="product.html">产品</a></li>
+        <li><a href="#" class="current">商城</a></li>
+        <li><a href="#">体验店</a></li>
+        <li><a href="#">服务</a></li>
+        <li><a href="#">ColorOS</a></li>
+        <li><a href="#">社区</a></li>
+        <li><a href="#"><p></p><span>0</span></a></li>
+    </ul>
+</div>
+<div class="body clear">
+    <div id="cart">
+        <ul class="normal">
+            <li><a href="#">首页&nbsp&nbsp&nbsp&nbsp/</a></li>
+            <li>&nbsp&nbsp&nbsp&nbsp&nbsp购物车</li>
+        </ul>
+        <ul class="detail normal">
+            <li class="chosen"><a href="#"><h5>购物车</h5></a></li>
+            <li><a href="#"><h5>填写订单</h5></a></li>
+            <li><a href="#"><h5>支付</h5></a></li>
+        </ul>
+        <form action="" class="clear">
+            <div class="form_header clear">
+                <ul class="normal">
+                    <li>
+                        <label>
+                            <span class="check all"></span>
+                            <span>全选</span>
+                        </label>
+                    </li>
+                    <li>产品</li>
+                    <li>数量</li>
+                    <li>单价</li>
+                    <li>操作</li>
+                </ul>
+            </div>
+            <div id="detail" class="detail">
+                <!-- 一套，每增加一步手机就动态添加一个下面的模块-->
+                <div id="single_detail">
+                    <!-- 			单个的产品		 -->
+                    <!--<div class="p_detail">-->
+                        <!--&lt;!&ndash; 图片 &ndash;&gt;-->
+                        <!--<div class="p_img">-->
+                            <!--<label>-->
+                                <!--<span class="check single"></span>-->
+                            <!--</label>-->
+                            <!--<img src="images/product/01/product01.png" alt="">-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; 右侧 &ndash;&gt;-->
+                        <!--<div class="p_count">-->
+                            <!--<div>-->
+                                <!--<h4>-->
+                                    <!--<a href="product1.html">R9s 玫瑰金 前后1600万像素</a>-->
+                                <!--</h4>-->
+
+                                <!--<p>玫瑰金|全网通|64G</p>-->
+                            <!--</div>-->
+                            <!--<div class="count">-->
+                                <!--<a class="sub_count" href="#">-</a>-->
+                                <!--<input type="text" value="1"/>-->
+                                <!--<a class="add_count" href="#">+</a>-->
+                            <!--</div>-->
+
+                            <!--<div class="price">-->
+                                <!--<span>￥2799.00</span>-->
+                            <!--</div>-->
+                            <!--<div class="delete">-->
+                                <!--删除-->
+
+                            <!--</div>-->
+
+                        <!--</div>-->
+
+                    <!--</div>-->
+                    <!--&lt;!&ndash; 赠品&ndash;&gt;-->
+                    <!--<div class="p_detail border_no">-->
+                        <!--&lt;!&ndash; 图片 &ndash;&gt;-->
+                        <!--<div class="p_img">-->
+
+                            <!--<img src="images/product/other07.jpg" alt="">-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; 右侧 &ndash;&gt;-->
+                        <!--<div class="p_count">-->
+                            <!--<div>-->
+                                <!--<h5>-->
+                                    <!--<a href="product1.html">赠品 &nbsp;&nbsp;OPPO时尚单品自拍杆 晴空蓝</a>-->
+                                <!--</h5>-->
+
+                                <!--<p class="blue">晴空蓝</p>-->
+                            <!--</div>-->
+                            <!--<div class="z_count">-->
+                                <!--<span>x <span>1</span></span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                    <!--</div>-->
+                    <!--<div class="p_detail">-->
+                        <!--&lt;!&ndash; 图片 &ndash;&gt;-->
+                        <!--<div class="p_img">-->
+
+                            <!--<img src="images/product/zeng_2.jpg" alt="">-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; 右侧 &ndash;&gt;-->
+                        <!--<div class="p_count">-->
+                            <!--<div>-->
+                                <!--<h5>-->
+                                    <!--<a href="product1.html">赠品 &nbsp;&nbsp;OPPO时尚单品自拍杆 晴空蓝</a>-->
+                                <!--</h5>-->
+
+                                <!--<p class="blue">深蓝</p>-->
+                            <!--</div>-->
+                            <!--<div class="z_count">-->
+                                <!--<span>x <span>1</span></span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                    <!--</div>-->
+                </div>
+                <!-- form 尾部总计-->
+                <div id="all_count" class="all_count">
+                    <ul>
+                        <li><b>商品数量：<b>1</b></b></li>
+                        <li><b>小计：<b class="money">￥2779.00</b></b></li>
+                        <li><b>订单满600可使用花呗分期3/6/12期</b></li>
+                    </ul>
+                </div>
+                <div class="pay">
+                    <div><a class="underline" href="#">继续购买>></a></div>
+                    <div><a href="#">结算</a></div>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+<div id="fixed">
+
+    <a href="#">
+        <span>回到顶部</span>
+        <b><i></i></b>
+    </a>
+    <a href="#">
+        <span>意见反馈</span>
+        <b><i></i></b>
+    </a>
+</div>
+<div id="ask">
+    <a href="#"><img src="images/mini/ask_01.png"></a>
+</div>
+<script>
+    window.onload = function () {
+        $("#foot").load("data/iframe.php")
+    }
+
+</script>
+<div id="foot"></div>
+<script src="js/huan.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

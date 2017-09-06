@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>oppo注册界面</title>
+    <link rel="stylesheet" href="css/reg.css">
+</head>
+<body>
+<div id="top">
+    <div>
+        <ul>
+            <li><a href="#">oppo官网</a></li>
+            <li><a href="#">oppo社区</a></li>
+            <li><a href="#">colorOS</a></li>
+        </ul>
+    </div>
+</div>
+<div id="main">
+    <div>注册OPPO账号</div>
+    <form action="data/reg_do.php" id="loginForm" method="post" enctype="application/x-www-form-urlencoded">
+        <div class="area_input">
+            <input class="username" id="username" name="username" type="text" placeholder="请输入手机号码"/>
+
+            <div class="phone" id="phone"></div>
+        </div>
+        <div class="area_input">
+            <input class="password" id="password" name="password" type="password" placeholder="请输入6-20的密码"/>
+            <div class="pass" id="pass"></div>
+            <!--             <div><img src="images/mini/yanzheng/captcha_1.jpg" alt=""/></div> -->
+        </div>
+        <div class="area_input">
+            <input class="repassword" id="repassword" name="repassword" type="password" placeholder="请确认密码"/>
+            <div class="repass" id="repass"></div>
+            <!--             <div><img src="images/mini/yanzheng/captcha_1.jpg" alt=""/></div> -->
+        </div>
+
+        <div>
+            <div class="protocol">
+                <label><img src="images/mini/checked.jpg" alt=""/></label>
+                <label>已阅读并同意 <a href="#">《OPPO帐号注册协议》</a> </label>
+
+                <div class="yan"></div>
+            </div>
+            <input class="btSubmit" id="btSubmit" type="button" value="立即注册"/>
+        </div>
+    </form>
+
+</div>
+<footer>
+
+    <p>&copy; 2005 - 2016 东莞市永盛通信科技有限公司 版权所有 粤ICP备08130115号-1</p>
+
+</footer>
+<!--<script src="js/test.js"></script>-->
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    var progress = 0;
+//    $("#btSubmit").prop("disabled", "true");
+    var pp = password.value;
+    var rp = repassword.value;
+    var n = username.value;
+//    function reg(){
+
+
+
+
+
+//    }
+    username.onblur = password.onblur = function () {
+        var n = username.value;
+
+
+        if (n == '') {  //用户没有输入任何内容，则退出函数
+            return;
+        }
+        else {
+
+//
+
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+
+                        doResponse(xhr);
+
+                    } else {
+                        alert('响应完成但有问题');
+                    }
+                }
+            }
+
+            xhr.open('GET', 'data/reg.php?uname=' + n, true);
+            xhr.send(null);
+            function doResponse(xhr) {
+                if (xhr.responseText === 'cunzai') {
+                    phone.style.color = '#f00';
+                    phone.style.fontSize = "12px";
+                    phone.innerHTML = '该用户名已经存在';
+                } else if (xhr.responseText === 'bucunzai') {
+                    phone.style.color = 'green';
+                    phone.style.fontSize = "12px";
+                    phone.innerHTML = '';
+
+                } else {
+                    alert('响应消息返回了其它的错误消息！具体内容请查看响应消息！');
+                }
+            }
+        }
+
+
+    }
+    //            账号写入数据库程序
+
+
+    $("#btSubmit").click(function (e) {
+        var n = username.value;
+        var pp = password.value;
+        var rp = repassword.value;
+        pass.innerHTML = '';
+        repass.innerHTML = '';
+        phone.innerHTML = '';
+
+        e.preventDefault();
+        var reg_username = /[0-9]{11}/g;
+        var reg_pass =/[A-Za-z0-9]{6,20}/g;
+
+            if (!reg_username.test(n)) {
+
+
+                phone.innerHTML = '请输入您的手机号';
+                phone.style.color = '#f00';
+                phone.style.fontSize = "12px";
+
+            } else {
+                progress += 20;
+                console.log("1:" + progress);
+
+                    if (!reg_pass.test(pp)) {
+
+
+                        pass.innerHTML = '请重新输入密码';
+                        pass.style.color = '#f00';
+                        pass.style.fontSize = "12px";
+
+                    } else if(pp==rp) {
+                        progress += 20;
+                        console.log("2:" + progress);
+                        $("#btSubmit").removeProp("disabled");
+
+                        console.log("wowo");
+
+                        var data = $('#loginForm').serialize();
+                        $.ajax({
+                            type: 'POST',
+                            url: 'data/reg_do.php',
+                            data: data,
+                            success: function (data) {
+                                if (data.code < 0) {
+                                    alert('注册失败：' + data.msg);
+                                } else {
+
+                                    alert('注册成功！3s跳转到登录页面');
+                                    setTimeout(function(){
+
+                                        location.href = 'login.html';
+                                    },2000);
+                                }
+                            },
+                            error: function () {
+                                alert('异步请求有误！请检查响应消息！')
+                            }
+                        });
+//                           });   //**********
+                    }else{
+                        repass.innerHTML = '两次输入的密码不一致';
+                        repass.style.color = '#f00';
+                        repass.style.fontSize = "12px";
+                    }
+
+//                }
+            }
+//        }
+    });
+
+</script>
+</body>
+</html>

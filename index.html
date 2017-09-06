@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>oppo首页</title>
+	 <script src="js/jquery-1.11.3.js"></script>
+	 <link rel="stylesheet" href="css/iframe.css"/>
+	<link rel="stylesheet" href="css/oppo.css" >
+ </head>
+ <body>
+  <!--1、页面顶部-->
+	<header id="top" class="clear">
+		<ul class="rt index_menu">
+			<li ><a href="login.html"id="duname">登陆</a></li>
+			<li ><a href="reg.html"id="out">注册</a></li>
+			<li><a href="#">Global</a></li>
+		</ul>
+	</header>
+	<!--logo-->
+	<div  id="top_box">
+		<p ><img href="index.html"src="images/mini/logo.png">
+		</p>
+		<ul class="rt"class="clear">
+			<li><a href="#"class="current">首页</a></li>
+			<li><a href="product.html">产品</a></li>
+			<li><a href="shopcity.html" >商城</a></li>
+			<li><a href="#">体验店</a></li>
+			<li><a href="#">服务</a></li>
+			<li><a href="#">ColorOS</a></li>
+			<li><a href="#">社区</a></li>
+			<li><a href="#"></a></li>
+		</ul>	
+	</div>
+	<!--3、banner部分-->
+  <div id="slider_contaienr">
+	  <div id="slider">
+		  <ul id="imgs">
+		  </ul>
+		  <ul id="indexs">
+		  </ul>
+	  </div>
+
+
+  </div>
+		<!--3张小图-->
+		
+	<ul id="banner_bottom" class="clear">
+			<li><img src="images/indexdiv1.jpg"></li>
+			<li class="center"><img src="images/indexdiv2.jpg"></li>
+			<li><img src="images/indexdiv3.png"></li>
+			
+	</ul>
+	<!--5、页面底部，服务-->
+    <div id="fixed">
+		
+		<a href="#">
+			<span>回到顶部</span>
+			<b><i></i></b>
+		</a>
+		<a href="#">
+			<span>意见反馈</span>
+			<b><i></i></b>
+		</a>	
+	</div>
+  <script>
+	  window.onload= function () {
+		  $("#foot").load("data/iframe.php")
+	  }
+  </script>
+ <div id="foot"></div>
+  <script>
+	  var n=sessionStorage['myopp'];
+	  var t=sessionStorage['tuichu'];
+
+    document.getElementById("duname").innerHTML=n;
+
+	  document.getElementById("out").innerHTML=t;
+//	  console.log(n);
+  </script>
+  <script src="js/index.js"></script>
+  <script src="js/huan.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>订单页面</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <link rel="stylesheet" href="css/iframe.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/cart.css"/>
+</head>
+<body>
+<!--1、页面顶部-->
+<header id="top" class="clear">
+    <ul class="rt index_menu">
+        <li><a href="login.html" id="duname">登陆</a></li>
+        <li><a href="#" id="out">注册</a></li>
+        <li><a href="#">Global</a></li>
+
+    </ul>
+</header>
+<div id="top_box">
+    <p><img href="index.html" src="images/mini/logo.png">
+    </p>
+    <ul class="rt" class="clear">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="product.html">产品</a></li>
+        <li><a href="#" class="current">商城</a></li>
+        <li><a href="#">体验店</a></li>
+        <li><a href="#">服务</a></li>
+        <li><a href="#">ColorOS</a></li>
+        <li><a href="#">社区</a></li>
+        <li><a href="#"><p></p><span id="cart_count">0</span></a></li>
+    </ul>
+</div>
+<div class="body clear">
+    <div id="cart">
+        <ul class="normal">
+            <li><a href="#">首页&nbsp&nbsp&nbsp&nbsp/</a></li>
+            <li>&nbsp&nbsp&nbsp&nbsp&nbsp购物车&nbsp&nbsp&nbsp&nbsp/</li>
+            <li>&nbsp&nbsp&nbsp&nbsp&nbsp购物车结算&nbsp&nbsp&nbsp&nbsp/</li>
+            <li>&nbsp&nbsp&nbsp&nbsp&nbsp填写订单</li>
+        </ul>
+        <ul class="detail normal">
+            <li class="chosen"><a href="#"><h5>购物车</h5></a></li>
+            <li><a href="#"><h5>填写订单</h5></a></li>
+            <li><a href="#"><h5>支付</h5></a></li>
+        </ul>
+        <form action="" id="chosen" class="clear">
+            <div class="form_header clear">
+                <ul class="normal ul_bottom success">
+                    <p class="succ_ok">订单提交成功！</p>
+
+                    <p >订单号为：<span id="nu"></span>请在48小时内完成付款</p>
+
+                </ul>
+            </div>
+            <div class="form_header  clear">
+                <ul class="normal ul_bottom">
+                    <a class="ad_address">订单详情</a>
+
+                    <div class="detail_a">
+                        <div >
+                            <div>
+                                <p>商品清单：</p>
+
+                            </div>
+                            <div>
+                                <p >手机号码: <span id="user_phone"></span></p>
+
+                            </div>
+                            <div id="detailed_list"class="detailed_list">
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+
+
+            <div id="detail" class="detail">
+                <!-- 一套，每增加一步手机就动态添加一个下面的模块-->
+                <div id="single_detail">
+                    <!-- 			单个的产品		 -->
+
+                </div>
+                <!-- form 尾部总计-->
+                <div id="all_count" class="all_count">
+                    <ul>
+
+                        <li><b>应付金额：<b id="money_pay" class="money">￥2779.00</b></b></li>
+
+                    </ul>
+                </div>
+                <div class="pay">
+
+                    <div class="pay_order"><a class="do_order">立即支付</a></div>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+<div id="fixed">
+
+    <a href="#">
+        <span>回到顶部</span>
+        <b><i></i></b>
+    </a>
+    <a href="#">
+        <span>意见反馈</span>
+        <b><i></i></b>
+    </a>
+</div>
+<div id="ask">
+    <a href="#"><img src="images/mini/ask_01.png"></a>
+</div>
+<script>
+    window.onload = function () {
+        $("#foot").load("data/iframe.php")
+    }
+
+</script>
+<div id="foot"></div>
+<script src="js/huan.js"></script>
+<script src="js/success.js"></script>
+
+
+</body>
+</html>

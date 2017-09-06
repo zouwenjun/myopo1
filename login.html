@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>oppo登陆界面</title>
+	<script src="js/jquery-1.11.3.js"></script>
+	<link rel="stylesheet" href="css/iframe.css"/>
+	<link rel="stylesheet" href="css/login.css" >
+</head>
+<body>
+<div id="top">
+	<div>
+		<ul>
+			<li><a href="#">oppo官网</a></li>
+			<li><a href="#">oppo社区</a></li>
+			<li><a href="#">colorOS</a></li>
+		</ul>
+	</div>
+</div>
+<div id="main">
+	<div class="clear">
+
+		<div><img src="images/mini/logo1.png" alt="">
+			<p>登录OPPO帐号可享受更多的服务</p>
+		</div>
+
+		<div class="clear">
+				<form action="post"id="list">
+				</form>
+				<div class="box">
+					<input type="text" form="list" id="username" name="username"placeholder="请输入登录用户名" >
+
+					<span></span>
+				</div>
+				<div class="box">
+					<input type="password" name="password" id="password" form="list" placeholder="请输入帐号密码">
+				</div>
+				<div id="help"><a href="#">登录遇到问题</a></div>
+				<div><input type="button"id="login"class="button"form="list"value="登录">
+				</div>
+				<div>
+					<input type="button"id="reg"class="button"form="list"value="注册OPPO账号"/>
+				</div>
+
+				<p id="other"><a href="#">其它方式登录</a></p>
+				<div id="otherway">
+					<ul class="clear">
+						<li>
+							<p><a href="#"></a></p>
+						</li>
+						<li>
+							<p><a href="#"></a></p>
+						</li>
+						<li>
+							<p><a href="#"></a></p>
+						</li>
+						<li>
+							<p><a href="#"></a></p>
+						</li>
+					</ul>
+				</div>
+		</div>
+
+	</div>
+</div>
+		<footer>
+
+			<p>&copy; 2005 - 2016 东莞市永盛通信科技有限公司 版权所有 粤ICP备08130115号-1</p>
+
+		</footer>
+		<script src="js/login.js"></script>
+<script>
+	window.onload= function () {
+		$("#foot").load("data/iframe.php")
+	}
+</script>
+<div id="foot"></div>
+<script src="js/login.js"></script>
+
+
+</body>
+</html>
